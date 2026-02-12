@@ -1,0 +1,37 @@
+<h1 style="text-align:center;color:#ff4081;">
+Yasmeen 💛  
+Are you my forever bestie? 🥺
+</h1>
+
+<div style="text-align:center;margin-top:40px;">
+<button onclick="step()" id="yes">Yes 😌</button>
+<button onmouseover="move()" ontouchstart="move()" id="no">No 😏</button>
+</div>
+
+<script>
+let s = 1;
+
+function move(){
+  let b = document.getElementById("no");
+  b.style.position="absolute";
+  b.style.left = Math.random()*80 + "%";
+  b.style.top = Math.random()*80 + "%";
+}
+
+function step(){
+  if(s==1){
+    document.querySelector("h1").innerText =
+    "Sach me Yasmeen? Mujhe life bhar jhelegi? 😂";
+    s=2;
+  }else{
+    document.body.innerHTML =
+    "<h1 style='color:#ff4081;text-align:center;'>Yayyy 💛</h1>\
+     <h2 style='text-align:center;'>\
+     Yasmeen tu sirf bestie nahi…<br>\
+     meri free therapist 😂<br>\
+     partner in crime 😎<br><br>\
+     Love you bestie 💛\
+     </h2>";
+  }
+}
+</script>
